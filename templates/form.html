@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='job.css') }}">
+        <title>Taylor Scale For Stress/Anxiety/Depression</title>
+    </head>
+    <body>
+        <div class="header">
+            <ul>
+                <img src="{{ url_for('static', filename='logo.png') }}">
+      
+                <li><a href="index">Home</li></a>
+                <li><a href="/form">Form</li></a>
+                <li><a href="/about">About Us</li> </a>           
+            </ul>
+        </div>
+        
+        <form method="POST" action="/form">
+            <div id="wrapper">
+                <div id="w70">
+                    1)  I was aware of dryness of my mouth.<br>
+                    2)  I couldn't experience any positive feeling at all.<br>
+                    3)  I found it hard to wind down.<br>
+                    4)  I experienced breathing difficulty (eg, excessively rapid breathing).<br>
+                    5)  I found it difficult to work up the initiative to do things.<br>
+                    6)  I tended to over-react to situations.<br>
+                    7)  I experienced trembling (eg, in the hands).<br>
+                    8)  I felt that I had nothing to look forward to.<br>
+                    9)  I felt that I was using a lot of nervous energy.<br>
+                    10) I was worried about situations in which I might panic and make a fool of myself.<br>
+                    11) I felt down-hearted and blue.<br>
+                    12) I found myself getting agitated.<br>
+                    13) I felt I was close to panic.<br>
+                    14) I was unable to become enthusiastic about anything.<br>
+                    15) I found it difficult to relax.<br>
+                    16) I was aware of the action of my heart in the absence of physical exertion.<br>
+                    17) I felt I wasn't worth much as a person.<br>
+                    18) I was intolerant of anything that kept me from getting on with what I was doing.<br>
+                    19) I felt scared without any good reason.<br>
+                    20) I felt that life wasn't worthwhile.<br>
+                    21) I felt that I was rather touchy.<br></h6>
+                </div>
+                <div id="w30">
+                    <input type="number" name="q1" placeholder="Enter Value"><br>
+                    <input type="number" name="q2" placeholder="Enter Value"><br>
+                    <input type="number" name="q3" placeholder="Enter Value"><br>
+                    <input type="number" name="q4" placeholder="Enter Value"><br>
+                    <input type="number" name="q5" placeholder="Enter Value"><br>
+                    <input type="number" name="q6" placeholder="Enter Value"><br>
+                    <input type="number" name="q7" placeholder="Enter Value"><br>
+                    <input type="number" name="q8" placeholder="Enter Value"><br>
+                    <input type="number" name="q9" placeholder="Enter Value"><br>
+                    <input type="number" name="q10" placeholder="Enter Value"><br>
+                    <input type="number" name="q11" placeholder="Enter Value"><br>
+                    <input type="number" name="q12" placeholder="Enter Value"><br>
+                    <input type="number" name="q13" placeholder="Enter Value"><br>
+                    <input type="number" name="q14" placeholder="Enter Value"><br>
+                    <input type="number" name="q15" placeholder="Enter Value"><br>
+                    <input type="number" name="q16" placeholder="Enter Value"><br>
+                    <input type="number" name="q17" placeholder="Enter Value"><br>
+                    <input type="number" name="q18" placeholder="Enter Value"><br>
+                    <input type="number" name="q19" placeholder="Enter Value"><br>
+                    <input type="number" name="q20" placeholder="Enter Value"><br>
+                    <input type="number" name="q21" placeholder="Enter Value"><br>
+                </div>
+            </div>
+            <center><input type="submit"></center>
+        </form>
+    </body>
+</html>
