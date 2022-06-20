@@ -7,14 +7,14 @@ People usually get confused among these terms and treat them as one sometimes. T
 A few screenshots of the working website:<br>
 <b>Screenshots</b><br>
 1) Start Screen<br>
-<img src="screenshots/1.png"><br>
+<img src="1.png"><br>
 2) Taking Input From User (Stage-1)<br>
-<img src="screenshots/2.png"><br>
+<img src="2.png"><br>
 3) Displaying Result And Remedies To User<br>
-<img src="screenshots/3.png"><br>
+<img src="3.png"><br>
 4) Taking Input From User (Stage-2)<br>
-<img src="screenshots/4.png"><br>
+<img src="4.png"><br>
 5) Displaying Result And Remedies To User<br>
-<img src="screenshots/5.png"><br>
+<img src="5.png"><br>
 6) Displaying The Statistics To The User<br>
-<img src="screenshots/6.png">
+<img src="6.png">
