@@ -14,7 +14,7 @@
       
                 <li><a href="index">Home</li></a>
                 <li><a href="/form">Form</li></a>
-                <li><a href="/about">About Us</li> </a>           
+                <li><a href="/about">Analysis</li> </a>           
             </ul>
         </div>
     
@@ -36,22 +36,39 @@
                     13) Family Size:<br></h6>
                 </div>
                 <div id="w30">
-                    <input type="number" name="x1" placeholder="Enter Value"><br>
-                    <input type="number" name="x2" placeholder="Enter Value"><br>
-                    <input type="number" name="x3" placeholder="Enter Value"><br>
-                    <input type="number" name="x4" placeholder="Enter Value"><br>
-                    <input type="number" name="x5" placeholder="Enter Value"><br>
+                    <input type="number" min=0 max=2 name="x1" placeholder="Enter Value"><br>
+                    <input type="number" min=1 max=4 name="x2" placeholder="Enter Value"><br>
+                    <input type="number" min=1 max=3 name="x3" placeholder="Enter Value"><br>
+                    <input type="number" min=1 max=3 name="x4" placeholder="Enter Value"><br>
+                    <input type="number" min=1 max=3 name="x5" placeholder="Enter Value"><br>
                     <input type="number" name="x6" placeholder="Enter Value"><br>
-                    <input type="number" name="x7" placeholder="Enter Value"><br>
-                    <input type="number" name="x8" placeholder="Enter Value"><br>
-                    <input type="number" name="x9" placeholder="Enter Value"><br>
-                    <input type="number" name="x10" placeholder="Enter Value"><br>
-                    <input type="number" name="x11" placeholder="Enter Value"><br>
-                    <input type="number" name="x12" placeholder="Enter Value"><br>
+                    <input type="number" min=1 max=3 name="x7" placeholder="Enter Value"><br>
+                    <input type="number" min=1 max=12 name="x8" placeholder="Enter Value"><br>
+                    <input type="number" min=1 max=5 name="x9" placeholder="Enter Value"><br>
+                    <input type="number" min=10 max=70 step="10" name="x10" placeholder="Enter Value"><br>
+                    <input type="number" min=1 max=2 name="x11" placeholder="Enter Value"><br>
+                    <input type="number" min=1 max=3 name="x12" placeholder="Enter Value"><br>
                     <input type="number" name="x13" placeholder="Enter Value"><br>
                 </div>
             </div>
             <center><input type="submit"></center>
         </form>
+        <div id="info">
+            <ul>
+                <li>Source: How the user found the test? 0=other or unknown, 1=from the front page of the site hosting the survey, 2=from google</li>
+                <li>Education: How much education have you completed? 1=Less than high school, 2=High school, 3=University degree, 4=Graduate degree</li>
+                <li>Urban: What type of area did you live when you were a child? 1=Rural (country side), 2=Suburban, 3=Urban (town, city)</li>
+                <li>Gender: What is your gender? 1=Male, 2=Female, 3=Other</li>
+                <li>Engnat: Is English your native language? 1=Yes, 2=No</li>
+                <li>Age: How old are you?</li>
+                <li>Hand: What hand do you use to write with? 1=Right, 2=Left, 3=Both</li>
+                <li>Religion: What is your religion? 1=Agnostic, 2=Atheist, 3=Buddhist, 4=Christian (Catholic), 5=Christian (Mormon), 6=Christian (Protestant),7=Christian (Other), 8=Hindu, 9=Jewish, 10=Muslim, 11=Sikh, 12=Other</li>
+                <li>Orientation: What is your sexual orientation? 1=Heterosexual, 2=Bisexual, 3=Homosexual, 4=Asexual, 5=Other</li>
+                <li>Race: What is your race? 10=Asian, 20=Arab, 30=Black, 40=Indigenous Australian, 50=Native American, 60=White, 70=Other</li>
+                <li>Voted: Have you voted in a national election in the past year? 1=Yes, 2=No</li>
+                <li>Familysize: Including you, how many children did your mother have?</li>
+                <li>Married: What is your marital status? 1=Never married, 2=Currently married, 3=Previously married</li>
+            </ul>
+        </div>
     </body>
 </html>

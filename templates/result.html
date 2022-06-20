@@ -13,61 +13,283 @@
                 <img src="{{ url_for('static', filename='logo.png') }}">
                 <li><a href="/index">Home</li></a>
                 <li><a href="/form">Form</li></a>
-                <li><a href="/about">About Us</li> </a>           
+                <li><a href="/about">Analysis</li> </a>           
             </ul>
-        </div>
-        
-        <div class="container1">
-            <div class="column">
-                {% if calculation_success == True %}   
-                    <b><p>Anxiety Score : {{ result }}</p>     
-                    {% if result<8 %}
-                        Normal
-                    {% elif result<10 %}
-                        Mild
-                    {% elif result<15 %}
-                        Moderate
-                    {% elif result<20 %}
-                        Severe
-                    {% else %}
-                        Extremely Severe
-                    {% endif %}
+        </div><br>
+        <table style="height: 200px; width: 99%">
+            <tbody>
+                {% if calculation_success == True %}
+                <tr> 
+                    <td style="width: 33%;" id="cont1"><b><center>Anxiety Score: {{ result }}</center>
+                        {% if result<8 %}
+                            <center>Normal</center>
+                            <br> <br>
+                            <ul>
+                                Here are some tips so as to maintain your Anxiety: <br><br>
+                                <li> Move your body :  Exercise is an important part of physical -- and mental -- health. It can ease your feelings of anxiety and boost your sense of well-being. Shoot for three to five 30-minute workout sessions a week. Be sure to choose exercises you enjoy so you look forward to them. </li>
+                                <li> Pay attention to sleep : Both quality and quantity are important for good sleep. Doctors recommend an average of 8 hours of shut-eye a night. If anxiety is making it hard for you to fall asleep, create a routine to help you catch your ZZZs:
+                                    <ol>
+                                        <li>Leave screens behind before you hit the hay.</li>
+                                        <li>Try to stick to a schedule.</li>
+                                        <li>Be sure your bed is comfy.</li>
+                                        <li>Keep your room's temperature on the cool side.</li>
+                                    </ol>
+                                </li>
+                                <li> Ease up on caffeine and alcohol: Both caffeine, which is an “upper,” and alcohol, which is a “downer,” can make anxiety kick into overdrive. Cut back or avoid them if you can. Remember, coffee and soda aren't the only things with caffeine. It can also pop up in: 
+                                    <ol>
+                                        <li>Diet pills</li>
+                                        <li>Some headache medicines</li>
+                                        <li>Chocolate</li>
+                                        <li>Tea</li>
+                                    </ol>
+                                </li>
+                                <li> Schedule your worry time: It may sound backward to plan to worry, but doctors actually recommend that you pick a time to think about your fears on purpose. Take 30 minutes to identify what’s bothering you and what you can do about it. Have your “worry session” at the same time every day. Don’t dwell on “what-ifs.” Focus on what actually makes you anxious.</li>
+                            </ul>
+                        {% elif result<10 %}
+                            <center>Mild</center><br><br>
+                            <ul>
+                                Here are some tips so as to reduce your Anxiety: <br><br>
+                                <li>Eat and drink to optimize your health: Some people try to reduce stress by drinking alcohol or eating too much. These actions may seem to help in the moment, but actually may add to stress in the long run. Caffeine also can compound the effects of stress. Consuming a healthy, balanced diet can help to combat stress.</li>
+                                <li>Exercise regularly: In addition to having physical health benefits, exercise has been shown to be a powerful stress reliever. Consider non-competitive aerobic exercise, strengthening with weights, or movement activities like yoga or Tai Chi, and set reasonable goals for yourself. Aerobic exercise has been shown to release endorphins—natural substances that help you feel better and maintain a positive attitude.</li>
+                                <li>Stop using tobacco and nicotine products: People who use nicotine often refer to it as a stress reliever. However, nicotine actually places more stress on the body by increasing physical arousal and reducing blood flow and breathing.</li>
+                                <li>Meditation: Meditation can help to slow racing thoughts, making it easier to manage stress and anxiety. A wide range of meditation styles, including mindfulness and meditation during yoga, may help.</li>
+                                <li>Writing:Finding a way to express anxiety can make it feel more manageable.
+                                    Some research suggests that journaling and other forms of writing can help people to cope better with anxiety.
+                                    A 2016 study, for example, found that creative writing may help children and teens to manage anxiety.</li>
+                                <li>Aromatherapy: Smelling soothing plant oils can help to ease stress and anxiety.</li>
+                            </ul>
+                        {% elif result<15 %}
+                            <center>Moderate</center><br><br>
+                            <ul>
+                                Here are some tips so as to reduce your Anxiety: <br><br>
+                                <li>Drink chamomile tea:
+                                    A cup of chamomile tea is a common home remedy to calm frayed nerves and promote sleep.
+                                    A 2014 studyTrusted Source showed chamomile may also be a powerful ally against GAD. The study found people who took German chamomile capsules (220 milligrams up to five times daily) had a greater reduction in  anxiety symptoms.</li>
+                                <li>Exercise regularly: In addition to having physical health benefits, exercise has been shown to be a powerful stress reliever. Consider non-competitive aerobic exercise, strengthening with weights, or movement activities like yoga or Tai Chi, and set reasonable goals for yourself. Aerobic exercise has been shown to release endorphins—natural substances that help you feel better and maintain a positive attitude.</li>
+                                <li>Stop using tobacco and nicotine products: People who use nicotine often refer to it as a stress reliever. However, nicotine actually places more stress on the body by increasing physical arousal and reducing blood flow and breathing.</li>
+                                <li>Meditation: Meditation can help to slow racing thoughts, making it easier to manage stress and anxiety. A wide range of meditation styles, including mindfulness and meditation during yoga, may help.</li>
+                                <li>Writing:Finding a way to express anxiety can make it feel more manageable.
+                                    Some research suggests that journaling and other forms of writing can help people to cope better with anxiety.
+                                    A 2016 study, for example, found that creative writing may help children and teens to manage anxiety.</li>
+                                <li>Aromatherapy: Smelling soothing plant oils can help to ease stress and anxiety.</li>
+                            </ul>
+                        {% elif result<20 %}
+                            <center>Severe</center><br><br>
+                            <ul>
+                                Here are some tips so as to reduce your Anxiety: <br><br>
+                                <li>Practice deep breathing:
+                                    Shallow, fast breathing is common with anxiety. It may lead to a fast heart rate, dizziness or lightheadedness, or even a panic attack.
+                                    
+                                    Deep breathing exercises — the deliberate process of taking slow, even, deep breaths — can help restore normal breathing patterns and reduce anxiety.</li>
+                                <li>Exercise regularly: In addition to having physical health benefits, exercise has been shown to be a powerful stress reliever. Consider non-competitive aerobic exercise, strengthening with weights, or movement activities like yoga or Tai Chi, and set reasonable goals for yourself. Aerobic exercise has been shown to release endorphins—natural substances that help you feel better and maintain a positive attitude.</li>
+                                <li>Stop using tobacco and nicotine products: People who use nicotine often refer to it as a stress reliever. However, nicotine actually places more stress on the body by increasing physical arousal and reducing blood flow and breathing.</li>
+                                <li>Meditation: Meditation can help to slow racing thoughts, making it easier to manage stress and anxiety. A wide range of meditation styles, including mindfulness and meditation during yoga, may help.</li>
+                                <li>Eat a balanced diet:
+                                    Low blood sugar levels, dehydration, or chemicals in processed foods, such as artificial flavorings, artificial coloring, and preservatives, may cause mood changes in some people. A high-sugar diet may also impact temperament.
+                                <li>Aromatherapy: Smelling soothing plant oils can help to ease stress and anxiety.</li>
+                            </ul>
+                        {% else %}
+                            <center>Extremely Severe</center><br><br>
+                            <ul>
+                                Here are some tips so as to reduce your Anxiety: <br><br>
+                                <li>Practice deep breathing:
+                                    Shallow, fast breathing is common with anxiety. It may lead to a fast heart rate, dizziness or lightheadedness, or even a panic attack.
+                                    
+                                    Deep breathing exercises — the deliberate process of taking slow, even, deep breaths — can help restore normal breathing patterns and reduce anxiety.</li>
+                                <li>Exercise regularly: In addition to having physical health benefits, exercise has been shown to be a powerful stress reliever. Consider non-competitive aerobic exercise, strengthening with weights, or movement activities like yoga or Tai Chi, and set reasonable goals for yourself. Aerobic exercise has been shown to release endorphins—natural substances that help you feel better and maintain a positive attitude.</li>
+                                <li>Stop using tobacco and nicotine products: People who use nicotine often refer to it as a stress reliever. However, nicotine actually places more stress on the body by increasing physical arousal and reducing blood flow and breathing.</li>
+                                <li>Meditation: Meditation can help to slow racing thoughts, making it easier to manage stress and anxiety. A wide range of meditation styles, including mindfulness and meditation during yoga, may help.</li>
+                                <li>Eat a balanced diet:
+                                    Low blood sugar levels, dehydration, or chemicals in processed foods, such as artificial flavorings, artificial coloring, and preservatives, may cause mood changes in some people. A high-sugar diet may also impact temperament.
+                                <li>Aromatherapy: Smelling soothing plant oils can help to ease stress and anxiety.</li>
+                            </ul>
+                        {% endif %}</b>
+                    </td>
+                    <td style="width: 33%;" id="cont2"><b><br><br><br><center>Depression Score: {{ result1 }}</center>
+                        {% if result1<10 %}
+                            <center>Normal</center> <br> <br>
+                            <ul>
+                                Here are some tips so as to maintain your Depression: <br><br>
+                                <li>Cut back on social media time: Research has shownTrusted Source that increased social media usage can cause or contribute to depression and low self-esteem. Social media can be addicting, and it’s a necessity to stay connected with family, friends, and even coworkers. It’s how we plan and invite each other to events and share big news. <br>
+                                    However, limiting social media time can help prevent depression. You can do this by:
+                                    <ol>
+                                        <li>deleting all social apps from your phone</li>
+                                        <li>using website-blocking extensions that only let you use certain sites for a preset amount of time</li>
+                                        <li>only going to social media with a purpose and avoiding logging on several times day just for something to do</li>
+                                    </ol>
+                                </li>
+                                <li>Build strong relationships: Having a strong support system and an active social life is important for our mental health. Research has shownTrusted Source that having even “adequate” social support can protect against depression. <br><br>
+                                    Make sure that you’re regularly connecting with friends and family, even when your lives are busy. Attending social events when you can and finding new hobbies that could help you meet new people can all help you build new relationships too.</li>
+                                <li>Get plenty of sleep: Getting enough sleep is necessary for both mental and physical health. According to the National Sleep Foundation, people with insomnia have a tenfold risk of developing depression compared to those who sleep well.According to an older articleTrusted Source, there is a strong link between depression and insomnia. A lack of sleep may worsen symptoms of depression.</li>    
+                            </ul>
+                        {% elif result1<14 %}
+                            <center>Mild</center><br><br>
+                            <ul>
+                                Here are some steps so as to reduce Depression: <br><br>
+                                    <li>Get in a routine: If you’re depressed, you need a routine, says Ian Cook, MD. He's a psychiatrist and director of the Depression Research and Clinic Program at UCLA.
+                                        Depression can strip away the structure from your life. One day melts into the next. Setting a gentle daily schedule can help you get back on track.</li>
+                                    <li>Set goals: When you're depressed, you may feel like you can't accomplish anything. That makes you feel worse about yourself. To push back, set daily goals for yourself.
+                                        "Start very small," Cook says. "Make your goal something that you can succeed at, like doing the dishes every other day."
+                                        </li>
+                                    <li>Exercise: It temporarily boosts feel-good chemicals called endorphins. It may also have long-term benefits for people with depression. Regular exercise seems to encourage the brain to rewire itself in positive ways, Cook says.
+                                        How much exercise do you need? You don’t need to run marathons to get a benefit. Just walking a few times a week can help.</li>
+                                    <li>Eat healthy: There is no magic diet that fixes depression. It's a good idea to watch what you eat, though. If depression tends to make you overeat, getting in control of your eating will help you feel better.
+                                        Although nothing is definitive, Cook says there's evidence that foods with omega-3 fatty acids (such as salmon and tuna) and folic acid (such as spinach and avocado) could help ease depression.
+                                    </li>
+                                    <li>Get enough sleep: Depression can make it hard to get enough shut-eye, and too little sleep can make depression worse.
+                                       Start by making some changes to your lifestyle. Go to bed and get up at the same time every day. Take all the distractions out of your bedroom,no computer and no TV. In time, you may find your sleep improves.</li>
+                            </ul>
+                        {% elif result1<21 %}
+                            <center>Moderate</center><br><br>
+                            <ul>
+                                Here are some steps so as to reduce Depression: <br><br>
+                                    <li>Challenge Negative Thoughts:
+                                        When someone is depressed, they often engage in negative thinking. Thoughts such as, "I'm a failure,"  "No one likes me," or "I'll always feel this way," are common in a depressed person's mind. Negative thoughts like these become an unconscious habit, reinforcing the feeling of depression.</li>
+                                    <li>Laughter: 
+                                        Laughing is another method for increasing dopamine in the brain. Sitting down and watching comedy shows or movies, reading jokes, laughing with others, or thinking about amusing things that result in laughter can all boost dopamine levels and help in reducing depression.
+                                        </li>
+                                    <li>Exercise: It temporarily boosts feel-good chemicals called endorphins. It may also have long-term benefits for people with depression. Regular exercise seems to encourage the brain to rewire itself in positive ways, Cook says.
+                                        How much exercise do you need? You don’t need to run marathons to get a benefit. Just walking a few times a week can help.</li>
+                                    <li>Eat healthy: There is no magic diet that fixes depression. It's a good idea to watch what you eat, though. If depression tends to make you overeat, getting in control of your eating will help you feel better.
+                                        Although nothing is definitive, Cook says there's evidence that foods with omega-3 fatty acids (such as salmon and tuna) and folic acid (such as spinach and avocado) could help ease depression.
+                                    </li>
+                                    <li>Get enough sleep: Depression can make it hard to get enough shut-eye, and too little sleep can make depression worse.
+                                       Start by making some changes to your lifestyle. Go to bed and get up at the same time every day. Take all the distractions out of your bedroom,no computer and no TV. In time, you may find your sleep improves.</li>
+                            </ul>
+                        {% elif result1<28 %}
+                            <center>Severe</center><br><br>
+                            <ul>
+                                Here are some steps so as to reduce Depression: <br><br>
+                                    <li>Challenge Negative Thoughts:
+                                        When someone is depressed, they often engage in negative thinking. Thoughts such as, "I'm a failure,"  "No one likes me," or "I'll always feel this way," are common in a depressed person's mind. Negative thoughts like these become an unconscious habit, reinforcing the feeling of depression.</li>
+                                    <li>Laughter: 
+                                        Laughing is another method for increasing dopamine in the brain. Sitting down and watching comedy shows or movies, reading jokes, laughing with others, or thinking about amusing things that result in laughter can all boost dopamine levels and help in reducing depression.
+                                        </li>
+                                    <li>Do something new: When you’re depressed, you’re in a rut. Push yourself to do something different. Go to a museum. Pick up a used book and read it on a park bench. Volunteer at a soup kitchen. Take a language class.Trying something new alters the levels of [the brain chemical] dopamine, which is associated with pleasure, enjoyment, and learning."</li>
+                                    <li>Take on responsibilities: When you’re depressed, you may want to pull back from life and give up your responsibilities at home and at work. Don't. Staying involved and having daily responsibilities can help you maintain a lifestyle that can help counter depression. They ground you and give you a sense of accomplishment.Hence, you should consider volunteer work.
+                                    </li>
+                                    <li>Get enough sleep: Depression can make it hard to get enough shut-eye, and too little sleep can make depression worse.
+                                       Start by making some changes to your lifestyle. Go to bed and get up at the same time every day. Take all the distractions out of your bedroom,no computer and no TV. In time, you may find your sleep improves.</li>
+                            </ul>
+                        {% else %}
+                            <center>Extremely Severe</center><br><br>
+                            <ul>
+                                Here are some steps so as to reduce Depression: <br><br>
+                                    <li>Challenge Negative Thoughts:
+                                        When someone is depressed, they often engage in negative thinking. Thoughts such as, "I'm a failure,"  "No one likes me," or "I'll always feel this way," are common in a depressed person's mind. Negative thoughts like these become an unconscious habit, reinforcing the feeling of depression.</li>
+                                    <li>Laughter: 
+                                        Laughing is another method for increasing dopamine in the brain. Sitting down and watching comedy shows or movies, reading jokes, laughing with others, or thinking about amusing things that result in laughter can all boost dopamine levels and help in reducing depression.
+                                        </li>
+                                    <li>Do something new: When you’re depressed, you’re in a rut. Push yourself to do something different. Go to a museum. Pick up a used book and read it on a park bench. Volunteer at a soup kitchen. Take a language class.Trying something new alters the levels of [the brain chemical] dopamine, which is associated with pleasure, enjoyment, and learning."</li>
+                                    <li>Take on responsibilities: When you’re depressed, you may want to pull back from life and give up your responsibilities at home and at work. Don't. Staying involved and having daily responsibilities can help you maintain a lifestyle that can help counter depression. They ground you and give you a sense of accomplishment.Hence, you should consider volunteer work.
+                                    </li>
+                                    <li>Get enough sleep: Depression can make it hard to get enough shut-eye, and too little sleep can make depression worse.
+                                       Start by making some changes to your lifestyle. Go to bed and get up at the same time every day. Take all the distractions out of your bedroom,no computer and no TV. In time, you may find your sleep improves.</li>
+                            </ul>
+                        {% endif %}</b>
+                    </td>
+                    <td style="width: 33%;" id="cont3"><b><center>Stress Score: {{ result2 }}</center>
+                        {% if result2<10 %}
+                            <center>Normal</center> <br> <br>
+                            <ul>
+                                Here are some tips so as to maintain your Stress: <br><br>
+                                <li>Relax Your Muscles: When you’re stressed, your muscles get tense. You can help loosen them up on your own and refresh your body by:
+                                    <ol>
+                                        <li>Stretching</li>
+                                        <li>Enjoying a massage</li>
+                                        <li>Taking a hot bath or shower</li>
+                                        <li>Getting a good night’s sleep</li>
+                                    </ol>
+                                </li> 
+                                <li>Deep Breathing: Stopping and taking a few deep breaths can take the pressure off you right away. You’ll be surprised how much better you feel once you get good at it. Just follow these 5 steps:
+                                    <ol>
+                                        <li>Sit in a comfortable position with your hands in your lap and your feet on the floor. Or you can lie down.</li>
+                                        <li>Close your eyes.</li>
+                                        <li>Imagine yourself in a relaxing place. It can be on the beach, in a beautiful field of grass, or anywhere that gives you a peaceful feeling.</li>
+                                        <li>Slowly take deep breaths in and out.</li>
+                                        <li>Do this for 5 to 10 minutes at a time.</li>
+                                    </ol>
+                                </li>
+                                <li>Eat Well: Eating a regular, well-balanced diet will help you feel better in general. It may also help control your moods. Your meals should be full of vegetables, fruit, whole grains, and lean protein for energy. And don’t skip any. It’s not good for you and can put you in a bad mood, which can actually increase your stress.</li>
+                                <li>Take a Break: You need to plan on some real downtime to give your mind time off from stress. If you’re a person who likes to set goals, this may be hard for you at first. Restful things can include Meditation,Yoga,Prayer,listening to your favourite song and spending time with nature</li>
+                            </ul>
+                        {% elif result2<14 %}
+                            <center>Mild</center><br><br>
+                            <ul>
+                                Here are some tips so as to reduce Stress:<br><br>
+                                <li>Ecotherapy: Ecotherapy is a way of improving your wellbeing and self-esteem by spending time in nature. This can include physical exercise in green spaces or taking part in a gardening or conservation project.It will help you to spend time outdoors or doing crafts.</li>
+                                <li>Complementary therapies
+                                    You may find certain complementary therapies help you manage feelings of stress. These might include:
+                                    <ol>
+                                        <li>Yoga and Meditation</li>
+                                        <li>Acupuncture</li>
+                                        <li>Aromatherapy</li>
+                                        <li>Massage</li>
+                                    </ol></li>
+                                <li>Meditate: Meditation brings short-term stress relief as well as lasting stress management benefits. There are many different forms of meditation to try–each one is unique and brings its own appeal. </li>
+                                <li>Practice Progressive Muscle Relaxation:
+                                    Progressive muscle relaxation involves relaxing all the muscles in your body, group by group. To practice, you can start with a few deep breaths.         
+                                    Then, practice tightening and relaxing each muscle group, starting with your forehead and moving down to your toes.                                    
+                                    With practice, you'll learn to recognize tension and tightness in your muscles and you'll be able to relax more easily. Each time you practice, however, you should experience a feeling of relaxation sweeping through your body. </li>
+                                <li>Focus on Breathing
+                                    Just focusing on your breath or changing the way you breathe can make a big difference to your overall stress level. Breathing techniques can calm your body and your brain in just a few minutes. </li>
+                            </ul>
+                        {% elif result2<21 %}
+                            <center>Moderate</center><br><br>
+                            <ul>
+                                Here are some tips so as to reduce Stress:<br><br>
+                                <li>Ecotherapy: Ecotherapy is a way of improving your wellbeing and self-esteem by spending time in nature. This can include physical exercise in green spaces or taking part in a gardening or conservation project.It will help you to spend time outdoors or doing crafts.</li>
+                                <li>Complementary therapies
+                                    You may find certain complementary therapies help you manage feelings of stress. These might include:
+                                    <ol>
+                                        <li>Yoga and Meditation</li>
+                                        <li>Acupuncture</li>
+                                        <li>Aromatherapy</li>
+                                        <li>Massage</li>
+                                    </ol></li>
+                                <li>Meditate: Meditation brings short-term stress relief as well as lasting stress management benefits. There are many different forms of meditation to try–each one is unique and brings its own appeal. </li>
+                                <li>Take a Walk:
+                                    Exercise is a fantastic stress reliever that can work in minutes. Taking a walk allows you to enjoy a change of scenery, which can get you into a different frame of mind, and brings the benefits of exercise as well.                                   
+                                    So whether you just need to take a stroll around the office to get a break from a frustrating task or you decide to go for a long walk in the park after work, walking is a simple but effective way to rejuvenate your mind and body. Maintain a healthy weight and lose body fat. It also improves cardiovascular fitness and muscle endurance.</li>
+                                <li>Focus on Breathing:
+                                    Just focusing on your breath or changing the way you breathe can make a big difference to your overall stress level. Breathing techniques can calm your body and your brain in just a few minutes. </li>
+                            </ul>
+                        {% elif result2<28 %}
+                            <center>Severe</center><br><br>
+                            <ul>
+                                Here are some tips so as to reduce Stress:<br><br>
+                                <li>Ecotherapy: Ecotherapy is a way of improving your wellbeing and self-esteem by spending time in nature. This can include physical exercise in green spaces or taking part in a gardening or conservation project.It will help you to spend time outdoors or doing crafts.</li>
+                                <li>Create Artwork:
+                                    Getting in touch with your creative side may have been easy for you during childhood, but if you’ve lost touch with your penchant for artwork, it’s not too late to pick it up again.
+                                    If you aren't into drawing or painting, consider coloring in a coloring book. Adult coloring books have risen in popularity and for good reason—coloring can be a great stress reliever.</li>
+                                <li>Meditate: Meditation brings short-term stress relief as well as lasting stress management benefits. There are many different forms of meditation to try–each one is unique and brings its own appeal. </li>
+                                <li>Take a Walk:
+                                    Exercise is a fantastic stress reliever that can work in minutes. Taking a walk allows you to enjoy a change of scenery, which can get you into a different frame of mind, and brings the benefits of exercise as well.                                   
+                                    So whether you just need to take a stroll around the office to get a break from a frustrating task or you decide to go for a long walk in the park after work, walking is a simple but effective way to rejuvenate your mind and body. Maintain a healthy weight and lose body fat. It also improves cardiovascular fitness and muscle endurance.</li>
+                                <li>Focus on Breathing:
+                                    Just focusing on your breath or changing the way you breathe can make a big difference to your overall stress level. Breathing techniques can calm your body and your brain in just a few minutes. </li>
+                            </ul>
+                        {% else %}
+                            <center>Extremely Severe</center><br><br>
+                            <ul>
+                                Here are some tips so as to reduce Stress:<br><br>
+                                <li>Make Time for Leisure Activities:
+                                    Leisure activities can be a wonderful way to relieve stress.12 Yet, many people feel as though their lives are too busy for hobbies, games, or extra fun.But building time for leisure into your schedule could be key to helping you feel your best.</li>
+                                <li>Create Artwork:
+                                    Getting in touch with your creative side may have been easy for you during childhood, but if you’ve lost touch with your penchant for artwork, it’s not too late to pick it up again.
+                                    If you aren't into drawing or painting, consider coloring in a coloring book. Adult coloring books have risen in popularity and for good reason—coloring can be a great stress reliever.</li>
+                                <li>Meditate: Meditation brings short-term stress relief as well as lasting stress management benefits. There are many different forms of meditation to try–each one is unique and brings its own appeal. </li>
+                                <li>Develop a Positive Self-Talk Habit:
+                                    The way you talk to yourself matters. Harsh self-criticism, self-doubt, and catastrophic predictions aren't helpful. If you're constantly thinking things like, "I don't have time for this," and "I can't stand this," you'll stress yourself out.Positive self-talk can help you develop a healthier outlook. And an optimistic and compassionate conversation can help you manage your emotions and take positive action. It's important to learn to talk to yourself in a more realistic and compassionate manner.</li>
+                                <li>Focus on Breathing:
+                                    Just focusing on your breath or changing the way you breathe can make a big difference to your overall stress level. Breathing techniques can calm your body and your brain in just a few minutes. </li>
+                            </ul>
+                        {% endif %}</b>
+                    </td>
+                </tr>
                 {% endif %}
-            </div>
-            <div class="column">
-                {% if calculation_success == True %}                
-                    <p>Depression Score : {{ result1 }}</p>
-                    {% if result1<10 %}
-                        Normal
-                    {% elif result1<14 %}
-                        Mild
-                    {% elif result1<21 %}
-                        Moderate
-                    {% elif result1<28 %}
-                        Severe
-                    {% else %}
-                        Extremely Severe
-                    {% endif %}
-                {% endif %}
-            </div>
-            <div class="column">
-                {% if calculation_success == True %}                
-                    <p>Stress Score : {{ result2 }}</p>
-                    {% if result1<10 %}
-                        Normal
-                    {% elif result1<14 %}
-                        Mild
-                    {% elif result1<21 %}
-                        Moderate
-                    {% elif result1<28 %}
-                        Severe
-                    {% else %}
-                        Extremely Severe
-                    {% endif %}
-                {% endif %}
-            </div>
-        </div>
-        Print the solutions according to the result of the test.</b><br>
+            </tbody>
+        </table><br>
         <button><a href="/form1">Stage 2</a></button>
     </body>
 </html>

@@ -4,7 +4,6 @@ import model as m
 import pyttsx3
 import speech_recognition as sr
 
-
 app = Flask(__name__)
 
 engine = pyttsx3.init()
@@ -19,8 +18,7 @@ def speak(audio):
 
 @app.route("/")
 def index():
-    ##param = 'Hello Everyone. We help you to find if you are suffering from Anxiety/Stress/Depression. Mental health has been a big concern from the beginning; still, we do not take care of it much, leading to most people suffering from stress, anxiety, or depression. Taylor Scale for stress/depression/anxiety is a website based on the Taylor Manifest Scale. This website tries to find whether we have stress/anxiety/depression and suggest measures to control it or manage it.'
-    param = 'Test'
+    param = 'Hello Everyone. We help you to find if you are suffering from Anxiety/Stress/Depression and suggest measures to control it or manage it.'
     thr = Thread(target=speak, args=[param])
     thr.start()
     return render_template("index.html")
@@ -81,7 +79,7 @@ def model():
             ans19 = float(ans19)
             ans20 = float(ans20)
             ans21 = float(ans21)
-            global anxietyscore 
+            global anxietyscore, stressscore, depressionscore
             anxietyscore = (ans1 + ans4 + ans7 + ans10 + ans13 + ans16 + ans19)*2
             depressionscore = (ans2 + ans5 + ans8 + ans11 + ans14 + ans17 + ans20)*2
             stressscore = (ans3 + ans6 + ans9 + ans12 + ans15 + ans18 + ans21)*2
@@ -133,9 +131,13 @@ def model1():
             in11 = float(in11)
             in12 = float(in12)
             in13 = float(in13)
-            answer = m.sad_pred(in1, in2, in3, in4, in5, in6, in7, in8, in9, in10, in11, in12, in13, anxietyscore)
+            answer = m.anxiety_pred(in1, in2, in3, in4, in5, in6, in7, in8, in9, in10, in11, in12, in13, anxietyscore)
+            answer1 = m.stress_pred(in1, in2, in3, in4, in5, in6, in7, in8, in9, in10, in11, in12, in13, stressscore)
+            answer2 = m.depression_pred(in1, in2, in3, in4, in5, in6, in7, in8, in9, in10, in11, in12, in13, depressionscore)
             print(answer)
-            return render_template("result1.html", my_answer = answer, calculation_success = True)
+            print(answer1)
+            print(answer2)
+            return render_template("result1.html", my_answer = answer, my_answer1 = answer1, my_answer2 = answer2, calculation_success = True)
         except ValueError:
             return render_template("form1.html",
             my_answer = "Bad Input",
